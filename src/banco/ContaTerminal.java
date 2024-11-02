@@ -4,10 +4,10 @@
 
     public class ContaTerminal {
         public static void main(String[] args) {
-            int numero;
-            String agencia;
-            String nome;
-            double saldo;
+            int numero = 0;
+            String agencia = "";
+            String nome = "";
+            double saldo = 0.0;
             
             try(Scanner ler = new Scanner(System.in)){
                 System.out.println("Por favor, digite o numero da Agencia: ");
@@ -25,7 +25,7 @@
                 saldo = ler.nextDouble();
             }catch(Exception erro){
                 System.out.println("Ocorreu um erro na entrada de dados. Tente novamente!");
-                System.exit(0);
+                return;
             }
 
             System.out.println("Olá " + nome + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numero +  " e seu saldo " + saldo + " já está disponível para saque!");
